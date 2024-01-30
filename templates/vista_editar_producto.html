@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+  <h1>Editar Producto</h1>
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ formulario.as_p }}
+    <input type="submit" value="Guardar Cambios">
+  </form>
+{% endblock %}
